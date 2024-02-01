@@ -3,19 +3,10 @@
 
     <item android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"/>
+        android:title="@string/home" />
 
-    <item android:id="@+id/profile"
+    <item android:id="@+id/codeExecution"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="My Profile"/>
-
-    <item android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings"/>
-
-    <item android:id="@+id/privacy"
-        android:icon="@drawable/ic_baseline_privacy_tip_24"
-        android:title="Privacy"/>
-
+        android:title="@string/code_execution"/>
 
 </menu>

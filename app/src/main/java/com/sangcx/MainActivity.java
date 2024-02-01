@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,38 +38,27 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.frame_layout, new HomeFragment())
                 .commit();
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        navigationView.setNavigationItemSelectedListener(item -> {
 
-                switch (item.getItemId())
-                {
-                    case R.id.home:
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frame_layout, new HomeFragment())
-                                .commit();
-                        break;
+            switch (item.getItemId())
+            {
+                case R.id.home:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new HomeFragment())
+                            .commit();
+                    break;
 
-                    case R.id.profile:
-                        drawerLayout.closeDrawer(GravityCompat.START);
+                case R.id.codeExecution:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new CodeExecutionFragment())
+                            .commit();
+                    break;
 
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frame_layout, new ProfileFragment())
-                                .commit();
-                        break;
-
-                    case R.id.settings:
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.privacy:
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-                }
-
-                return true;
             }
+
+            return true;
         });
     }
 }

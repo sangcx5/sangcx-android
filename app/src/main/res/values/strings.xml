@@ -2,4 +2,9 @@
     <string name="app_name">SangCX</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="command">Command</string>
+    <string name="execute_as_root">Execute as root</string>
+    <string name="execute_as_normal_user">Execute as normal user</string>
+    <string name="home">Home</string>
+    <string name="code_execution">Code Execution</string>
 </resources>
