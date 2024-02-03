@@ -13,4 +13,8 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/accessibility_service"/>
 
+    <item android:id="@+id/checkPermission"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/check_permission"/>
+
 </menu>
