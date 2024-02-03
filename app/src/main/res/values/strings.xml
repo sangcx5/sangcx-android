@@ -8,4 +8,6 @@
     <string name="home">Home</string>
     <string name="code_execution">Code Execution</string>
     <string name="hello_d">Hello 😃</string>
+    <string name="list_app_with_accessibility_service">List app with Accessibility service:</string>
+    <string name="accessibility_service">Accessibility Service</string>
 </resources>

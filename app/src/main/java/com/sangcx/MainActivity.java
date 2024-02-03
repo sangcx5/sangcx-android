@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
+import com.sangcx.accessibility.AccessibilityFragment;
 import com.sangcx.codeExecution.CodeExecutionFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame_layout, new CodeExecutionFragment())
+                            .commit();
+                    break;
+
+                case R.id.accessibilityService:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new AccessibilityFragment())
                             .commit();
                     break;
 
