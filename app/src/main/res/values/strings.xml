@@ -12,4 +12,6 @@
     <string name="accessibility_service">Accessibility Service</string>
     <string name="check_permission">Check Permission</string>
     <string name="app_can_send_sms">App can send SMS</string>
+    <string name="read_logcat">Read Logcat</string>
+    <string name="biometrics">Biometrics</string>
 </resources>

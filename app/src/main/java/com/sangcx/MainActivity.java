@@ -11,8 +11,10 @@ import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
 import com.sangcx.accessibility.AccessibilityFragment;
+import com.sangcx.biometrics.BiometricsFragment;
 import com.sangcx.checkPermission.CheckPermissionFragment;
 import com.sangcx.codeExecution.CodeExecutionFragment;
+import com.sangcx.readLogcat.ReadLogcatFragment;
 
 public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
@@ -68,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame_layout, new CheckPermissionFragment())
+                            .commit();
+                    break;
+                case R.id.readLogcat:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new ReadLogcatFragment())
+                            .commit();
+                    break;
+                case R.id.biometrics:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new BiometricsFragment())
                             .commit();
                     break;
 

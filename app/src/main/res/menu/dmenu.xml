@@ -17,4 +17,12 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/check_permission"/>
 
+    <item android:id="@+id/readLogcat"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/read_logcat" />
+
+    <item android:id="@+id/biometrics"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/biometrics" />
+
 </menu>
