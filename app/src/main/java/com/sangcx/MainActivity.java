@@ -14,6 +14,7 @@ import com.sangcx.accessibility.AccessibilityFragment;
 import com.sangcx.biometrics.BiometricsFragment;
 import com.sangcx.checkPermission.CheckPermissionFragment;
 import com.sangcx.codeExecution.CodeExecutionFragment;
+import com.sangcx.keyboardCheck.KeyboardCheckFragment;
 import com.sangcx.readLogcat.ReadLogcatFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame_layout, new BiometricsFragment())
+                            .commit();
+                    break;
+
+                case R.id.keyboardCheck:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new KeyboardCheckFragment())
                             .commit();
                     break;
 

@@ -25,4 +25,8 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/biometrics" />
 
+    <item android:id="@+id/keyboardCheck"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/keyboard_check" />
+
 </menu>
