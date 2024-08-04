@@ -15,4 +15,6 @@
     <string name="read_logcat">Read Logcat</string>
     <string name="biometrics">Biometrics</string>
     <string name="keyboard_check">Keyboard Check</string>
+    <string name="can_not_take_screenshot_or_record_this_screen">Can not take screenshot or record this screen</string>
+    <string name="secure_screen">Secure Screen</string>
 </resources>
