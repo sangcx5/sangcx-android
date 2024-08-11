@@ -17,7 +17,7 @@ import com.sangcx.codeExecution.CodeExecutionFragment;
 import com.sangcx.request.RequestFragment;
 import com.sangcx.keyboardCheck.KeyboardCheckFragment;
 import com.sangcx.readLogcat.ReadLogcatFragment;
-import com.sangcx.secureScreen.SecureScreen;
+import com.sangcx.secureScreen.SecureScreenFragment;
 
 public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.secureScreen:
                     drawerLayout.closeDrawer(GravityCompat.START);
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.frame_layout, new SecureScreen())
+                            .replace(R.id.frame_layout, new SecureScreenFragment())
                             .commit();
                     break;
 

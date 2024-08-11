@@ -17,7 +17,7 @@ import com.sangcx.R;
 
 import java.util.Arrays;
 
-public class SecureScreen extends Fragment {
+public class SecureScreenFragment extends Fragment {
 
     Context context;
 
