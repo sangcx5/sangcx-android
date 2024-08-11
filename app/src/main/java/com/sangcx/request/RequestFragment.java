@@ -85,7 +85,7 @@ public class RequestFragment extends Fragment {
     void setResponse(String responseData) {
         Gson gson = new Gson();
         Data data = gson.fromJson(responseData, Data.class);
-        String enc = new String(Base64.decode(data.getEnc(), Base64.DEFAULT));
+        String enc = decodeRequestBody(data.getEnc());
         String hash = data.getHash();
         if (hash.equals(sha256(enc))) {
             textView.setText(enc);
@@ -108,11 +108,19 @@ public class RequestFragment extends Fragment {
         return hexString.toString();
     }
 
+    String encodeRequestBody(String data) {
+        return Base64.encodeToString(data.getBytes(), Base64.DEFAULT).trim();
+    }
+
+    String decodeRequestBody(String data) {
+        return new String(Base64.decode(data, Base64.DEFAULT));
+    }
+
     void sendRequest(){
         Gson gson = new Gson();
         Data data = new Data();
         String reqBody = "secret";
-        data.setEnc(Base64.encodeToString("secret".getBytes(), Base64.DEFAULT).trim());
+        data.setEnc(encodeRequestBody(reqBody));
         data.setHash(sha256(reqBody));
         String json = gson.toJson(data);
         RequestBody body = RequestBody.create(json, JSON);
