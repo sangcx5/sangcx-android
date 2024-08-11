@@ -1,7 +1,6 @@
 package com.sangcx.readLogcat;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class ReadLogcatFragment extends Fragment {
         try {
             Process mLogcatProc;
             mLogcatProc = Runtime.getRuntime().exec(new String[]
-                    {"logcat", "-d", "AndroidSecurity:D *:S" });
+                    {"logcat", "-d", "SangCX *:S" });
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     mLogcatProc.getInputStream()));
