@@ -17,4 +17,7 @@
     <string name="keyboard_check">Keyboard Check</string>
     <string name="can_not_take_screenshot_or_record_this_screen">Can not take screenshot or record this screen</string>
     <string name="secure_screen">Secure Screen</string>
+    <string name="send_request">Send request</string>
+    <string name="get_public_key">Get public key</string>
+    <string name="request">Request</string>
 </resources>

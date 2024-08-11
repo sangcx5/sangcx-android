@@ -14,6 +14,7 @@ import com.sangcx.accessibility.AccessibilityFragment;
 import com.sangcx.biometrics.BiometricsFragment;
 import com.sangcx.checkPermission.CheckPermissionFragment;
 import com.sangcx.codeExecution.CodeExecutionFragment;
+import com.sangcx.request.RequestFragment;
 import com.sangcx.keyboardCheck.KeyboardCheckFragment;
 import com.sangcx.readLogcat.ReadLogcatFragment;
 import com.sangcx.secureScreen.SecureScreen;
@@ -98,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.frame_layout, new SecureScreen())
+                            .commit();
+                    break;
+
+                case R.id.request:
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_layout, new RequestFragment())
                             .commit();
                     break;
 
