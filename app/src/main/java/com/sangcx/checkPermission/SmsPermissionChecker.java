@@ -39,7 +39,7 @@ public class SmsPermissionChecker {
 
         if (permissions != null) {
             for (String permission : permissions) {
-                if ("android.permission.SEND_SMS".equals(permission)) {
+                if ("android.permission.SEND_SMS".equals(permission) || "android.permission.READ_SMS".equals(permission)) {
                     return true;
                 }
             }
