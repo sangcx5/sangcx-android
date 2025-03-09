@@ -55,11 +55,11 @@ public class AccessibilityFragment extends Fragment {
                 if (serviceInfo.getId().equals(enabledService)) {
                     String packageName = serviceInfo.getResolveInfo().serviceInfo.packageName;
                     String appName = getAppName(context, packageName);
-                    text += "----------------------------------" + "\n";
+                    text += "-----------------------------------" + "\n";
                     text += "Package Name: " + packageName + "\n";
                     text += "App Name: " + appName + "\n";
                     text += "Service ID: " + serviceInfo.getId() + "\n";
-                    text += "----------------------------------" + "\n";
+                    text += "-----------------------------------" + "\n";
                 }
             }
         }
